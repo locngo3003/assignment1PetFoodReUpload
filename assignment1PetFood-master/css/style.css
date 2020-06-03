@@ -1,0 +1,129 @@
+#header h1{
+    font-family: fantasy;
+    font-size: large;
+    font-style: oblique;
+
+}
+#header div p{
+    font-style: oblique;
+    cursor: pointer;
+}
+#header{
+    background-image:url("https://www.petfoodindustry.com/ext/resources/Images-by-month-year/16_11/Pet-food-research-1612PETresearch.jpg");
+    background-repeat: no-repeat;
+}
+#content{
+    display: flex;
+background-color: #5a92ff}
+
+
+#productTable{
+    width: 70%;
+}
+#voicePage{
+    width: 30%;
+    text-align: center;
+    float: right;
+
+}
+#footer{
+    background-color: #333;
+    text-align: center;
+    color:white;
+    margin-top: 300px;
+}
+#imgAni img{
+    width: 100px;
+    height: 100px;
+}
+#movingImg{
+    position: relative;
+}
+#divAnimation{
+ display: flex;
+}
+#imageAnimation img{
+    height: 100px;
+    weight:100px;
+    float: right;
+}
+#imageAnimation {
+    width : 30%;
+    padding-top: 100px;
+    margin: 20px;
+}
+#jsanimation{
+    width: 70%;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    margin-left: 30px;
+}
+/*search button*/
+button {
+    margin: 0 auto 5px auto;
+    border:0;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+/*css animation*/
+#animation{
+    animation-name: first_animation ;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+}
+@keyframes first_animation {
+    from{color: aliceblue}
+    to{color: blue}
+}
+
+
+#topnav {
+    overflow: hidden;
+    background-color:skyblue;
+
+}
+
+#topnav a {
+    float:left ;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#topnav a:hover {
+    background-color: #5a92ff;
+    color: black;
+    border-bottom-right-radius: 60%;
+}
+
+#topnav a.active {
+    background-color: green;
+    color: white;
+}
+
+#imageAnimation img{
+    /*transform: rotate(90deg);*/
+    /*transform-origin: center center;*/
+    animation-name: imageRotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /*transform: scale(2);*/
+    /*transform: translate(200px, 100px);*/
+    transform: skew(15deg, 15deg);
+}
+
+/*@keyframes create animation in css*/
+@keyframes imageRotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+}
+
+
+
+
