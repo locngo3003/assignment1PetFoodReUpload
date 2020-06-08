@@ -45,15 +45,20 @@ https://assignment2php.herokuapp.com/assignment1PetFood-master/homePage.php
 <!--        <a id="dog" href="foodForDog.html">Dog</a>-->
 <!--        <a id="cat" href="foodforCat.html">Cat</a>-->
 <!--        <a id="other" href="otherPet.html">Other</a>-->
-<!--        <a href="aboutUs.php">About Us</a>-->
         <?php
         include_once "class/User.php";
         $user = new User(null,"","","");
         $categories = $user ->viewCategories();
-        print_r($categories);
+        $i =0;
+        while ($i <sizeof($categories)){
+            $category= $categories[$i];
+            echo "<a href='foodForDog.html'>".$category->name."</a>";
+            $i = $i+1;
+        }
 
         ?>
     </div>
+    <a href="aboutUs.php">About Us</a>
     <!--Content-->
 </div>
 <h1>Featured Products</h1>
