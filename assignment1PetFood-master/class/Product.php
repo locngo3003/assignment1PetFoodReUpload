@@ -1,6 +1,11 @@
 <?php
 
-
+/**
+ * Class Category
+ * author Loc Ngo
+ * 6-9-20
+ * version 1
+ */
 class Product
 {
 public $id;
