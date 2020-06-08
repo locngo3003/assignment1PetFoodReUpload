@@ -50,6 +50,11 @@ class User
         return $categories;
     }
 
+    /**
+     * @name showProductsByCategory
+     * @param $categoryId
+     * @return array
+     */
     public function showProductsByCategory($categoryId){
         $conn = (new DB())->connection;
         $sql = "select * from Product where categoryId=".$categoryId; //. means merge two string
