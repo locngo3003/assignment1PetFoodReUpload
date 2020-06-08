@@ -52,7 +52,7 @@ class User
 
     public function showProductsByCategory($categoryId){
         $conn = (new DB())->connection;
-        $sql = "select * from Product where categoryid=".$categoryId; //. means merge two string
+        $sql = "select * from Product where categoryId=".$categoryId; //. means merge two string
         $products = array();
         $result = $conn->query($sql);
         if($result->num_rows>0){
