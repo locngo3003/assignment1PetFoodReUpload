@@ -8,6 +8,7 @@ detect free shipping: done;
 show invoice: done;
 calculate price*quantity and show:done;
 searching box: not required;
+https://assignment2php.herokuapp.com/assignment1PetFood-master/homePage.php
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -40,11 +41,11 @@ searching box: not required;
     </div>
     <!--navigationbar-->
     <div id="topnav">
-        <a class="active" href="homePage.html">Home Page</a>
+        <a class="active" href="homePage.php">Home Page</a>
         <a id="dog" href="foodForDog.html">Dog</a>
         <a id="cat" href="foodforCat.html">Cat</a>
         <a id="other" href="otherPet.html">Other</a>
-        <a href="aboutUs.html">About Us</a>
+        <a href="aboutUs.php">About Us</a>
     </div>
     <!--Content-->
 </div>
