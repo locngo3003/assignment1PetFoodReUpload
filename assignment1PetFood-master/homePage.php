@@ -57,8 +57,9 @@ https://assignment2php.herokuapp.com/assignment1PetFood-master/homePage.php
         }
 
         ?>
+        <a href="aboutUs.php">About Us</a>
     </div>
-    <a href="aboutUs.php">About Us</a>
+
     <!--Content-->
 </div>
 <h1>Featured Products</h1>
