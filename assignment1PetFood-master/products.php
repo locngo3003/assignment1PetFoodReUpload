@@ -28,16 +28,16 @@ include_once "header.php"
                 <tr style="height: 339px">
 
                     <td class="product">
-                        <img src="image/dogfood.png" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                        <p>$12 ea</p>
+                        <img src="image/<?php echo $product->image;?>" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
+                        <p>Price: <?php echo $product->prce;?></p>
                         <p>
                             Quantity:<input class="qty" id="dogFoodQty" type="number">
                             <button class = "addBut" id="addDogFood" onclick="addToCart(this); thongbao()" >Add to Cart</button>
                         </p>
                     </td>
                     <td class="product">
-                        <img src="image/dogfood2.jpeg" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                        <p>$20 ea</p>
+                        <img src="image/<?php echo $product->image;?>" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
+                        <p>Price: <?php echo $product->prce;?></p>
                         <p>
                             Quantity:<input class="qty" id="dogFood2Qty" type="number">
                             <button class = "addBut" id="addDogFood2" onclick="addToCart(this)">Add to Cart</button>
