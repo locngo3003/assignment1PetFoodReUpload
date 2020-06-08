@@ -15,32 +15,45 @@ include_once "header.php"
 ?>
 <h1>Featured Products</h1>
 <div id="content" >
+    <?php
+
+    $categoryId = $_GET["categoryId"];
+    $products = $user->showProductsByCategory($categoryId);
+    $i = 0;
+    while ($i < sizeof($products)) {
+        $product = $products[$i];
+    ?>
+        <div id="productTable">
+            <table border="1">
+                <tr style="height: 339px">
+
+                    <td class="product">
+                        <img src="image/dogfood.png" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
+                        <p>$12 ea</p>
+                        <p>
+                            Quantity:<input class="qty" id="dogFoodQty" type="number">
+                            <button class = "addBut" id="addDogFood" onclick="addToCart(this); thongbao()" >Add to Cart</button>
+                        </p>
+                    </td>
+                    <td class="product">
+                        <img src="image/dogfood2.jpeg" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
+                        <p>$20 ea</p>
+                        <p>
+                            Quantity:<input class="qty" id="dogFood2Qty" type="number">
+                            <button class = "addBut" id="addDogFood2" onclick="addToCart(this)">Add to Cart</button>
+                        </p>
+                    </td>
+
+
+                </tr>
+            </table>
+        </div>
+    <?php
+        $i = $i + 1;
+    }
+    ?>
     <!--Show product list-->
-    <div id="productTable">
-        <table border="1">
-            <tr style="height: 339px">
 
-                <td class="product">
-                    <img src="image/dogfood.png" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                    <p>$12 ea</p>
-                    <p>
-                        Quantity:<input class="qty" id="dogFoodQty" type="number">
-                        <button class = "addBut" id="addDogFood" onclick="addToCart(this); thongbao()" >Add to Cart</button>
-                    </p>
-                </td>
-                <td class="product">
-                    <img src="image/dogfood2.jpeg" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                    <p>$20 ea</p>
-                    <p>
-                        Quantity:<input class="qty" id="dogFood2Qty" type="number">
-                        <button class = "addBut" id="addDogFood2" onclick="addToCart(this)">Add to Cart</button>
-                    </p>
-                </td>
-
-
-            </tr>
-        </table>
-    </div>
     <!--    invoice-->
     <div id="voicePage" class="voice">
         <!-- Modal content -->
