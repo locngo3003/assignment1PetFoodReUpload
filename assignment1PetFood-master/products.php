@@ -34,7 +34,7 @@ include_once "header.php"
 
                     <td class="product">
                         <img src="image/<?php echo $product->image;?>" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                        <p>Price: <?php echo $product->prce;?></p>
+                        <p>Price: <?php echo $product->price;?></p>
                         <p>
                             Quantity:<input placeholder="qty" type="number">
                            <button name="<?php echo $product->name;?>"
