@@ -5,32 +5,24 @@
  * 6-9-20
  * version 1
  */
-class Product
+
+class Category
 {
-    public $id;
-    public $name;
-    public $price;
-    public $picture;
-    public $description;
-    public $categoryId;
+public $id;
+public $name;
+public $image;
 
     /**
-     * Product constructor.
+     * Category constructor.
      * @param $id
      * @param $name
-     * @param $price
-     * @param $description
-     * @param $categoryID
+     * @param $image
      */
-    public function __construct($id, $name, $price, $picture, $description, $categoryId)
+    public function __construct($id, $name, $image)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->price = $price;
-        $this->picture = $picture;
-        $this->description = $description;
-        $this->categoryId = $categoryId;
+        $this->image = $image;
     }
-
 
 }
