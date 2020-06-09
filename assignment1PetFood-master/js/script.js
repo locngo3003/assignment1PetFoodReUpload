@@ -88,104 +88,30 @@ cart.append("<p>Name: "+name1+" Price:"+Number(price)*Number(qty)+"</p>")
 
 function invoice() {
 
-    voicePage = document.getElementById("voicePage");
-    //Get the button that opens the modal
-    var btn = document.getElementById("showInvoiceBut");
+    modal = document.getElementById("myModal");
+    modal.style.display = "block";
 
-    //Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    //When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        cart = document.getElementsByClassName("cartInput");
-        voiceContent = document.getElementById("voice-content");
-        Total = 0; // initial Total
-        FinalTotal =0; // Final Total after calculate shipping fee
-        ShippingFee = 7; // default fee for shipping
-        var elems = document.getElementsByClassName("items");
-        i = 0
-        while (i<elems.length){
-            elems[i].parentNode.removeChild(elems[i]);
-        }
+    // Get the <span> element that closes the modal
+    cross = document.getElementsByClassName("close")[0];
+    console.log(cross);
 
 
-        i = 0;
-        while (i < cart.length) {
-            console.log(cart[i].id);
-            qty = cart[i].value;
-            switch (cart[i].id) {
-                case "cartDogFood":
-                    voiceContent.insertAdjacentHTML(
-                        'beforeend',
-                        '<p class = "items">Dog Food: Qty:'+ qty +' Price:$' + (Number(qty) * 12)+ '</p>');
-                    Total += (Number(qty) * 12);
-                    //checking total order price for free shipping
-                    if (Total>300){
-                        FinalTotal =Total
-                        alert('Congraturation !!! Shipping is now free for order over 300$')
-                    }
-                    else {
-                        FinalTotal= Total + ShippingFee
-                    }
-                    break;
-                case "cartDogFood2":
-                    voiceContent.insertAdjacentHTML(
-                        'beforeend',
-                        '<p class = "items">Dog Food2: Qty:'+ qty +' Price:$' + (Number(qty) * 20)+ '</p>');
-                    Total += (Number(qty) * 20);
-                    if (Total>300){
-                        FinalTotal =Total
-                        alert('Congraturation !!! Shipping is now free for order over 300$')
-                    }
-                    else {
-                        FinalTotal= Total + ShippingFee
-                    }
-                    break;
-                case "cartCatFood":
-                    voiceContent.insertAdjacentHTML(
-                        'beforeend',
-                        '<p class = "items">Cat Food: Qty:'+ qty +' Price:$' + (Number(qty) * 32)+ '</p>');
-                    Total += (Number(qty) * 32);
-                    if (Total>300){
-                        FinalTotal =Total
-                        alert('Congraturation !!! Shipping is now free for order over 300$')
-                    }
-                    else {
-                        FinalTotal= Total + ShippingFee
-                    }
-                    break;
-                case "cartBirdFood":
-                    voiceContent.insertAdjacentHTML(
-                        'beforeend',
-                        '<p class = "items">Bird Food: Qty:'+ qty +' Price:$' + (Number(qty) * 27)+ '</p>');
-                    Total += (Number(qty) * 27);
-                    if (Total>300){
-                        FinalTotal =Total
-                        alert('Congraturation !!! Shipping is now free for order over 300$')
-                    }
-                    else {
-                        FinalTotal= Total + ShippingFee
-                    }
-                    break;
-
-                default:
-                // code block
-            }
-
-            i++;
-
-        }
-        voiceContent.insertAdjacentHTML(
-            'beforeend',
-            '<p class = "items">Total and Shipping fee: $'+ FinalTotal+'</p>');
-
-
+    cross.onclick = function() {
+        modal.style.display = "none";
     }
 
 
+// When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    //Take everything from shopping cart
 
 }
-
 
 
 
