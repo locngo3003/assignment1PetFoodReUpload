@@ -10,7 +10,7 @@
             crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </head>
-<body onload="leftDividerAnimation()">
+<body onload="invoice()">
 
 <?php
 include_once "header.php";
@@ -38,7 +38,7 @@ include_once "header.php";
                             price = "<?php echo $product->price; ?>"
                             onclick="addProductToCart(this)">Add to cart</button>
                 </p>
-            </div>
+            </div
             <?php
             $i = $i + 1;
         }
