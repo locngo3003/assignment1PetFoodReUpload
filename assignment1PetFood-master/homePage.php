@@ -40,7 +40,7 @@ include_once "header.php"
                     <p>$12 ea</p>
                     <p>
                         Quantity:<input class="qty" id="dogFoodQty" type="number">
-                        <button class = "addBut" id="addDogFood" onclick="addToCart(this); thongbao()" >Add to Cart</button>
+                        <button class = "addBut" id="addDogFood" onclick="addToCart(this); " >Add to Cart</button>
                     </p>
                 </td>
                 <td class="product">
