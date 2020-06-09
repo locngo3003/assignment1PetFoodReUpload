@@ -51,10 +51,6 @@ include_once "header.php"
             ?>
         </div>
 
-    <div id="rightDiv">
-        <h2>Cart</h2>
-        <button id ="checkOut" onclick="invoice()">Check out</button>
-    </div>
     <!--Show product list-->
 
     <!--    invoice-->
