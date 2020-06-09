@@ -74,6 +74,18 @@ function addToCart(e) {
     }
 
 }
+
+
+function addProductToCart(e) {
+cart = $("#rightDiv");
+name1 = $(e).attr("name");
+price = $(e).attr("price");
+qty =$(e).prev().val();
+
+cart.append("<p>Name: "+name1+" Price:"+Number(price)*Number(qty)+"</p>")
+}
+
+
 function invoice() {
 
     voicePage = document.getElementById("voicePage");
