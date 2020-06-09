@@ -77,7 +77,7 @@ function addToCart(e) {
 
 
 function addProductToCart(e) {
-cart = $("#cartDiv");
+cart = $("#rightDiv");
 name1 = $(e).attr("name");
 price = $(e).attr("price");
 qty =$(e).prev().val();

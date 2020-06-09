@@ -1,4 +1,4 @@
-<div id = 'header' >
+<div id='header'>
     <div style=" display: flex">
         <div style="width: 50%">
             <h1 id="petfood">Pet Food</h1>
@@ -24,13 +24,13 @@
         <!--        <a id="other" href="otherPet.html">Other</a>-->
         <?php
         include_once "class/User.php";
-        $user = new User(null,"","","");
-        $categories = $user ->viewCategories();
-        $i =0;
-        while ($i <sizeof($categories)){
-            $category= $categories[$i];
-            echo "<a href='products.php?categoryId='>".$category->name."</a>";
-            $i = $i+1;
+        $user = new User(null, "", "", "");
+        $categories = $user->viewCategories();
+        $i = 0;
+        while ($i < sizeof($categories)) {
+            $category = $categories[$i];
+            echo "<a href='products.php?categoryId='>" . $category->name . "</a>";
+            $i = $i + 1;
         }
 
         ?>
