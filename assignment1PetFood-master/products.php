@@ -23,8 +23,8 @@ include_once "header.php"
 
     <div id = "middle">
         <?php
-        $categoryID = $_GET["categoryID"];
-        $products = $user->showProductsByCategory($categoryID);
+        $categoryId = $_GET["categoryID"];
+        $products = $user->showProductsByCategory($categoryId);
         $i = 0;
         while ($i<sizeof($products)){
             $product = $products[$i];
