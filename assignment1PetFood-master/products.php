@@ -20,15 +20,16 @@ include_once "header.php"
 ?>
 <h1>Featured Products</h1>
 <div id="content" >
-    <?php
 
-    $categoryId = $_GET["categoryId"];
-    $products = $user->showProductsByCategory($categoryId);
-    $i = 0;
-    while ($i < sizeof($products)) {
-        $product = $products[$i];
-    ?>
         <div id="productTable">
+            <?php
+
+            $categoryId = $_GET["categoryId"];
+            $products = $user->showProductsByCategory($categoryId);
+            $i = 0;
+            while ($i < sizeof($products)) {
+                $product = $products[$i];
+                ?>
             <table border="1">
                 <tr style="height: 339px">
 

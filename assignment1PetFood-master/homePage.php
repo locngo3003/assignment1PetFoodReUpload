@@ -8,7 +8,6 @@ detect free shipping: done;
 show invoice: done;
 calculate price*quantity and show:done;
 searching box: not required;
-https://assignment2php.herokuapp.com/assignment1PetFood-master/homePage.php
 -->
 <!DOCTYPE html>
 <html lang="en">
