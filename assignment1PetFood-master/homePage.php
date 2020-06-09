@@ -31,56 +31,7 @@ include_once "header.php"
 <h1>Featured Products</h1>
 <div id="content" >
     <!--Show product list-->
-    <div id="productTable">
-        <table border="1">
-            <tr style="height: 339px">
 
-                <td class="product">
-                    <img src="image/dogfood.png" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                    <p>$12 ea</p>
-                    <p>
-                        Quantity:<input class="qty" id="dogFoodQty" type="number">
-                        <button class = "addBut" id="addDogFood" onclick="addToCart(this); " >Add to Cart</button>
-                    </p>
-                </td>
-                <td class="product">
-                    <img src="image/dogfood2.jpeg" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                    <p>$20 ea</p>
-                    <p>
-                        Quantity:<input class="qty" id="dogFood2Qty" type="number">
-                        <button class = "addBut" id="addDogFood2" onclick="addToCart(this)">Add to Cart</button>
-                    </p>
-                </td>
-                <td class="product">
-                    <img src="image/catfood.jpeg" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                    <p>$32 ea</p>
-                    <p>
-                        Quantity:<input class="qty" id="catFoodQty" type="number">
-                        <button class = "addBut" id="addCatFood" onclick="addToCart(this)">Add to Cart</button>
-                    </p>
-                </td>
-                <td class="product">
-                    <img src="image/bird.png" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                    <p>$27 ea</p>
-                    <p>
-                        Quantity:<input class="qty" id="birdFoodQty" type="number">
-                        <button class = "addBut" id="addBirdFood" onclick="addToCart(this)">Add to Cart</button>
-                    </p>
-                </td>
-
-            </tr>
-        </table>
-    </div>
-    <!--    invoice-->
-    <div id="voicePage" class="voice">
-        <!-- Modal content -->
-        <div id="voice-content">
-            <p>Cart:</p>
-            <div id="cartDiv"></div>
-            <button id="showInvoiceBut">Invoice</button>
-        </div>
-
-    </div>
 </div>
 <!--js animation-->
 <div id="divAnimation">
