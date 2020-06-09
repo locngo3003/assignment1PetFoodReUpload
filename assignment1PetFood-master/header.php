@@ -27,12 +27,11 @@
         $user = new User(null, "", "", "");
         $categories = $user->viewCategories();
         $i = 0;
-        while ($i < sizeof($categories)) {
+        while ($i < sizeof($categories)){
             $category = $categories[$i];
-            echo "<a href='products.php?categoryId='>" . $category->name . "</a>";
+            echo "<a href='products.php?categoryId=".$category->id."'>".$category->name."</a>";
             $i = $i + 1;
         }
-
         ?>
         <a href="aboutUs.php">About Us</a>
     </div>
