@@ -10,19 +10,19 @@ class Category
 {
 public $id;
 public $name;
-public $pictrure;
+public $image;
 
     /**
      * Category constructor.
      * @param $id
      * @param $name
-     * @param $pictrure
+     * @param $image
      */
-    public function __construct($id, $name, $pictrure)
+    public function __construct($id, $name, $image)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->pictrure = $pictrure;
+        $this->image = $image;
     }
 
 }
