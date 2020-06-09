@@ -7,7 +7,8 @@
  */
 include_once "DB.php";
 include_once "Category.php";
-include_once  "Product.php";
+include_once "Product.php";
+
 class User
 {
     public $id;
@@ -30,44 +31,46 @@ class User
         $this->name = $name;
     }
 
+
     /**
      * @name viewCategories
      * @return category array
      */
-    public function viewCategories()
-    {
-        $conn = (new DB())->connection;// create connection from class
+    public function viewCategories(){
+        $conn = (new DB())->connection; //create connection from DB class
         $sql = "select * from Category"; //my query
-        $categories = array(); // my categories in an array
+        $categories = array(); //my categories is an array
         $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $category = new category(["id"], $row["name"], $row["picture"]);
-                array_push($categories, $category);
+        if ($result->num_rows > 0){
+            while ($row=$result->fetch_assoc()){
+                $category = new Category($row["id"], $row["name"], $row["picture"]); //each row in table is one category
+                array_push($categories, $category); //push category to category array
             }
         }
-        $conn->close();
+        $conn->close(); //close database connection
         return $categories;
     }
 
+
     /**
      * @name showProductsByCategory
-     * @param $categoryId
-     * @return array
+     * @param $categoryID
+     * @return product array
      */
-    public function showProductsByCategory($categoryId){
+    public function showProductsByCategory($categoryID){
         $conn = (new DB())->connection;
-        $sql = "select * from Product where categoryId=".$categoryId; //. means merge two string
+        $sql = "select * from Product where categoryID=".$categoryID; // . means merge two string
         $products = array();
         $result = $conn->query($sql);
-        if($result->num_rows>0){
+        if ($result->num_rows>0){
             while ($row = $result->fetch_assoc()){
-                $product = new Product($row["id"],$row["name"],$row["price"],$row["image"],$row["description"],$row["categoryId"]);
-                array_push($products, $product);
+                $product = new Product($row["id"], $row["name"], $row["price"],
+                    $row['picture'], $row["description"],$row["categoryID"]);
+                array_push($products,$product);
             }
         }
-
         $conn->close();
         return $products;
     }
+
 }

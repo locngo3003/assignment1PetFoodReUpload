@@ -75,6 +75,9 @@ function addToCart(e) {
 
 }
 
+total = 0 //total price will show in my invoice
+//localStorge
+//add product to cart
 function addProductToCart(e) {
     cart = $("#rightDiv");
     name1 = $(e).attr("name");

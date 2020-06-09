@@ -23,14 +23,14 @@ include_once "header.php"
 
     <div id = "middle">
         <?php
-        $categoryId = $_GET["categoryId"];
-        $products = $user->showProductsByCategory($categoryId);
+        $categoryID = $_GET["categoryID"];
+        $products = $user->showProductsByCategory($categoryID);
         $i = 0;
         while ($i<sizeof($products)){
             $product = $products[$i];
             ?>
             <div class="product">
-                <p><img src="image/<?php echo $product->image;?>"></p>
+                <p><img src="image/<?php echo $product->picture;?>"></p>
                 <p>Price: <?php echo $product->price;?></p>
                 <p>
                     <input placeholder="qty" type="number">
