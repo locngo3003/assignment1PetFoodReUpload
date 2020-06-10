@@ -18,23 +18,24 @@
     </div>
     <!--navigationbar-->
     <div id="topnav">
-        <a class="active" href="homePage.php">Home Page</a>
-        <!--        <a id="dog" href="foodForDog.html">Dog</a>-->
-        <!--        <a id="cat" href="foodforCat.html">Cat</a>-->
-        <!--        <a id="other" href="otherPet.html">Other</a>-->
-        <?php
-        include_once "class/User.php";
-        $user = new User(null,"","","");
-        $categories = $user ->viewCategories();
-        $i =0;
-        while ($i <sizeof($categories)){
-            $category= $categories[$i];
-            echo "<a href='products.php?categoryId='>".$category->name."</a>";
-            $i = $i+1;
-        }
+        <ul>
+            <li><a href="homePage.php" class="active">Home</a></li>
+            <!--            <li><a href="food.html" >Food</a></li>-->
+            <!--            <li><a href="phone.html">Phone</a></li>-->
+            <?php
+            include_once "class/User.php";
+            $user = new User(null, "", "", "");
+            $categories = $user->viewCategories();
+            $i = 0;
+            while ($i < sizeof($categories)){
+                $category = $categories[$i];
+                echo "<li><a href='products.php?categoryID=".$category->id."'>".$category->name."</a></li>";
+                $i = $i + 1;
+            }
+            ?>
+            <li><a href="aboutUs.php">About US</a></li>
 
-        ?>
-        <a href="aboutUs.php">About Us</a>
+        </ul>
     </div>
 
     <!--Content-->
