@@ -42,7 +42,7 @@ class User
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                $category = new category(["id"], $row["name"], $row["picture"]);
+                $category = new category($row["id"], $row["name"], $row["picture"]);
                 array_push($categories, $category);
             }
         }
