@@ -29,22 +29,14 @@ include_once "header.php"
         $product = $products[$i];
     ?>
         <div id="productTable">
-            <table border="1">
-                <tr style="height: 339px">
-
-                    <td class="product">
-                        <img src="image/<?php echo $product->image;?>" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
-                        <p>Price: <?php echo $product->price;?></p>
-                        <p>
-                            Quantity:<input placeholder="qty" type="number">
-                           <button name="<?php echo $product->name;?>"
-                                   price = "<?php echo $product->price;?>"
-                                   onclick="addProductToCart(this)">add to cart</button>
-                        </p>
-                    </td>
-
-                </tr>
-            </table>
+            <img src="image/<?php echo $product->image;?>" height="128" width="128"  onmouseleave="normalImage(this)" onmousemove="enlangeImage(this)"/>
+            <p>Price: <?php echo $product->price;?></p>
+            <p>
+                Quantity:<input placeholder="qty" type="number">
+                <button name="<?php echo $product->name;?>"
+                        price = "<?php echo $product->price;?>"
+                        onclick="addProductToCart(this)">add to cart</button>
+            </p>
             <?php
             $i = $i + 1;
             }
