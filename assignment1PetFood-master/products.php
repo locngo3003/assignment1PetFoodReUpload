@@ -49,13 +49,13 @@ include_once "header.php"
             $i = $i + 1;
             }
             ?>
-            <div id="rightDiv">
-                <h2>Cart</h2>
-                <button id ="checkOut" onclick="invoice()">Check out</button>
-            </div>
+
         </div>
 
-
+    <div id="rightDiv">
+        <h2>Cart</h2>
+        <button id ="checkOut" onclick="invoice()">Check out</button>
+    </div>
     <!--Show product list-->
 
     <!--    invoice-->
