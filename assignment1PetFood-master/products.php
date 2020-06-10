@@ -55,15 +55,16 @@ include_once "header.php"
     <!--Show product list-->
 
     <!--    invoice-->
-    <div id="voicePage" class="voice">
-        <!-- Modal content -->
-        <div id="voice-content">
-            <p>Cart:</p>
-            <div id="cartDiv"></div>
-            <button id="showInvoiceBut">Invoice</button>
-        </div>
+    <div id="myModal" class="modal">
 
+    <!-- Invoice content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id = "invoicePlace">Invoice</div>
     </div>
+
+</div>
+
 </div>
 <footer>
     <div id="footer">&copy; School of Computing and Information, Unitec, NZ</div>
