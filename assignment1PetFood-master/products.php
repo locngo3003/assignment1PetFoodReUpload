@@ -14,9 +14,9 @@
     <script src="js/script2.js"></script>
 
 </head>
-<body onload="invoice()">
+<body>
 <?php
-include_once "header.php"
+include_once "header.php";
 ?>
 <h1>Featured Products</h1>
 <div id="content" >
